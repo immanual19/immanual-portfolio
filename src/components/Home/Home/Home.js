@@ -1,4 +1,6 @@
 import React from 'react';
+import EndSection from '../EndSection/EndSection';
+import Footer from '../Footer/Footer';
 import HeaderMain from '../HeaderMain/HeaderMain';
 
 const Home = () => {
@@ -6,6 +8,8 @@ const Home = () => {
         <div>
             
             <HeaderMain></HeaderMain>
+            <EndSection></EndSection>
+            <Footer></Footer>
         </div>
     );
 };
