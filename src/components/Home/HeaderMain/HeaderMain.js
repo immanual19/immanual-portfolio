@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion"
 import './HeaderMain.css';
 const HeaderMain = () => {
     return (
@@ -6,7 +7,10 @@ const HeaderMain = () => {
             <div className="row">
                 <div className="col-md-8 text-white my-5 mx-5">
                     <p className="intro-text">Hi, I am</p>
-                    <h1 className="myName">A. Immanual Sarker.</h1>
+                    <motion.h1
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 2 }}
+                    className="myName">A. Immanual Sarker</motion.h1>
                     <br/>
                     <h3>I am a MERN stack developer who builds website.</h3>
                     <br/>

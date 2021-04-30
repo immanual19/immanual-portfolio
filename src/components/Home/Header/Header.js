@@ -12,7 +12,8 @@ const Header = () => {
      
         <nav className="navbar navbar-expand-lg navbar-light my-3 mx-3">
 
-        <Link to='/' style={{textDecoration:'none'}}><a className="navbar-brand main-logo" href="#">Immanual</a></Link>
+        <Link to='/' style={{textDecoration:'none'}}><a className="navbar-brand main-logo" href="#">
+        Immanual</a></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -24,12 +25,12 @@ const Header = () => {
         <Link to='/about' style={{textDecoration:'none'}}><li className="nav-item">
           <a className="nav-link header-text" href="#">About</a>
         </li></Link>
-        <li className="nav-item">
+        <Link to='/projects' style={{textDecoration:'none'}}><li className="nav-item">
           <a className="nav-link header-text" href="#">Projects</a>
-        </li>
-        <li className="nav-item">
+        </li></Link>
+        <Link to='/blogs' style={{textDecoration:'none'}}><li className="nav-item">
           <a className="nav-link header-text" href="#">Blog</a>
-        </li>
+        </li></Link>
         <Link to='/contact' style={{textDecoration:'none'}}><li className="nav-item">
           <a className="nav-link header-text" href="#">Contact</a>
         </li></Link>

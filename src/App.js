@@ -9,6 +9,8 @@ import {
 import AboutMe from './components/AboutMe/AboutMe';
 import NotFound from './components/NotFound/NotFound';
 import ContactMe from './components/ContactMe/ContactMe';
+import MyProjects from './components/MyProjects/MyProjects';
+import MyBlogs from './components/MyBlogs/MyBlogs';
 
 function App() {
   return (
@@ -26,6 +28,14 @@ function App() {
     <Route path='/contact'>
     <Header></Header>
     <ContactMe></ContactMe>
+    </Route>
+    <Route path='/projects'>
+    <Header></Header>
+    <MyProjects></MyProjects>
+    </Route>
+    <Route path='/blogs'>
+    <Header></Header>
+    <MyBlogs></MyBlogs>
     </Route>
     <Route path='*'>
     <NotFound></NotFound>
