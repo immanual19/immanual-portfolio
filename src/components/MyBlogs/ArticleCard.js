@@ -20,7 +20,7 @@ const ArticleCard = ({post}) => {
     const classes = useStyles();
     return (
       <motion.div whileHover={{ scale: 1.09 }} style={{margin:'5%'}}>
-        <a  style={{textDecoration: 'none', color:'white'}} href="https://immanuelsarker1.medium.com/what-is-javascri-534ebb8dd98" target="_blank"> <Card
+        <a  style={{textDecoration: 'none', color:'white'}} href={post.link} target="_blank"> <Card
         
         className={classes.root}>
       <CardActionArea>
