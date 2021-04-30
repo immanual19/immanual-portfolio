@@ -13,7 +13,7 @@ const BlogSection = () => {
             }
         </div>
         <Box mt={5} textAlign='center'>
-        <a style={{textDecoration:'none'}} href="http://localhost:3000/blogs"><Button variant="contained" color="secondary">See All Articles</Button></a></Box>
+        <a style={{textDecoration:'none'}} href="https://immanual-portfolio.web.app/blogs"><Button variant="contained" color="secondary">See All Articles</Button></a></Box>
         </div>
     );
 };
