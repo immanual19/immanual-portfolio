@@ -1,0 +1,41 @@
+.myName{
+    font-size: 50px;
+    color: lightgray;
+}
+.intro-text{
+    color: #2eb1d9;
+    text-align: justify;
+}
+.downloadHireButton{
+    text-decoration: none;
+    color: white;
+    height: 70px;
+    width: 170px;
+    background-color: #0a192f;
+    margin: 0px 3px 0px 3px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+
+}
+.downloadHireButton a{
+    color: white;
+    text-decoration: none;
+}
+.downloadHireButton:hover{
+    background-color: #437851;
+}
+
+@media  screen and (max-width: 760px) {
+    .myName{
+        font-size: 30px;
+    }
+    .downloadHireButton{
+        color: white;
+        height: 50px;
+        width: 170px;
+        background-color: #0a192f;
+        margin: 3px 5px 5px 3px;
+        border: 1px solid lightblue;
+        border-radius: 5px;
+    }
+}

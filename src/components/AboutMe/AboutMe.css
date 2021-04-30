@@ -1,0 +1,19 @@
+.greeting{
+    color: #2eb1d9;
+}
+.my-description{
+    color: white;
+    text-align: justify;
+}
+
+.known-technology button{
+    background-color: #0a192f;
+    margin: 5px 5px 5px 5px;
+    color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.my-image{
+    padding-top: 10%;
+    float: right;
+}

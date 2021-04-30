@@ -1,0 +1,21 @@
+.main-logo{
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    color: white !important;
+}
+
+.header-text{
+    color: white !important;
+    margin: 0 2px 0 2px;
+}
+
+.header-text:hover{
+    background-color: #336bc4;
+    border-radius: 5px;
+}
+
+.download-resume{
+    color: #8e992e !important;
+    border: 1px solid #8e992e;
+    border-radius: 5px;
+}
