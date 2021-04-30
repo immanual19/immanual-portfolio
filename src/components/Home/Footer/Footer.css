@@ -1,9 +1,12 @@
 .footer-section{
     margin: auto;
     width: 60%;
-    border: 3px solid lightgray;
-    border-radius: 5px;
     padding: 2%;
     color: white;
     text-align: center;
+  }
+
+.footer-icon{
+      color: white !important;
+      margin-right: 1%;
   }
