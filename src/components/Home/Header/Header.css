@@ -15,7 +15,12 @@
 }
 
 .download-resume{
-    color: #8e992e !important;
+    color: white !important;
+    border: 1px solid #8e992e;
+    border-radius: 5px;
+}
+.download-resume:hover{
+    background-color: #336bc4!important;
     border: 1px solid #8e992e;
     border-radius: 5px;
 }
