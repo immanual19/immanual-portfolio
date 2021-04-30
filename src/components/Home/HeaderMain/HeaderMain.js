@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import './HeaderMain.css';
 const HeaderMain = () => {
+    
     return (
         <div className="my-5 mx-5">
             <div className="row">
