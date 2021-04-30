@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
+import { motion } from "framer-motion";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -19,7 +19,10 @@ const useStyles = makeStyles({
 const ArticleCard = ({post}) => {
     const classes = useStyles();
     return (
-        <a style={{textDecoration: 'none', color:'white'}} href="https://immanuelsarker1.medium.com/what-is-javascri-534ebb8dd98" target="_blank"> <Card className={classes.root}>
+      <motion.div whileHover={{ scale: 1.09 }} style={{margin:'5%'}}>
+        <a  style={{textDecoration: 'none', color:'white'}} href="https://immanuelsarker1.medium.com/what-is-javascri-534ebb8dd98" target="_blank"> <Card
+        
+        className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -42,6 +45,7 @@ const ArticleCard = ({post}) => {
   
       </CardActions>
     </Card></a>
+    </motion.div>
     );
 };
 
