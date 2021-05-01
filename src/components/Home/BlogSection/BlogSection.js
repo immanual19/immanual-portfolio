@@ -3,6 +3,12 @@ import React from 'react';
 import blogPosts from '../../../FakeData/BlogData';
 import ArticleCard from '../../MyBlogs/ArticleCard';
 import './BlogSection.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 const BlogSection = () => {
     const randomThree=blogPosts.slice(0,3);
     return (
@@ -14,7 +20,7 @@ const BlogSection = () => {
             }
         </div>
         <Box mt={5} textAlign='center'>
-        <a style={{textDecoration:'none'}} href="https://immanual-portfolio.web.app/blogs"><Button variant="contained" color="secondary">See All Articles</Button></a></Box>
+        <Link style={{textDecoration:'none'}} to="/blogs"><Button variant="contained" color="secondary">See All Articles</Button></Link></Box>
         </div>
     );
 };

@@ -6,8 +6,14 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
-
+import {
+        BrowserRouter as Router,
+        Switch,
+        Route,
+        Link
+      } from "react-router-dom";
 import './ProjectSection.css';
+import { Box, Button } from '@material-ui/core';
 
 const ProjectSection = () => {
     return (
@@ -86,7 +92,11 @@ const ProjectSection = () => {
         </motion.div>
         
         </div>
+        <Box mt={5} textAlign='center'>
+        <Link style={{textDecoration:'none'}} to="/projects"><Button variant="contained" color="secondary">See All Projects</Button></Link></Box>
         </div>
+        
+        
     );
 };
 
