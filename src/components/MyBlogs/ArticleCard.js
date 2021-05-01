@@ -40,9 +40,10 @@ const ArticleCard = ({post}) => {
       </CardActionArea>
       <CardActions>
       
+      
+      
       <Button variant="contained" size="small" color="primary">{post.type}</Button>
       <Button variant="contained" size="small" color="primary">1st May, 2020</Button>
-  
       </CardActions>
     </Card></a>
     </motion.div>

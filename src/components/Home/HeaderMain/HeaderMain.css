@@ -1,10 +1,10 @@
 .myName{
     font-size: 50px;
     text-align: left;
-    color: lightgray;
+    color: lightgray !important;
 }
 .intro-text{
-    color: #2eb1d9;
+    color: #04151d;
     text-align: justify;
 }
 .downloadHireButton{
