@@ -3,6 +3,7 @@ import BlogSection from '../BlogSection/BlogSection';
 import EndSection from '../EndSection/EndSection';
 import Footer from '../Footer/Footer';
 import HeaderMain from '../HeaderMain/HeaderMain';
+import ProjectSection from '../ProjectSection/ProjectSection';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             
             <HeaderMain></HeaderMain>
             <BlogSection></BlogSection>
+            <ProjectSection></ProjectSection>
             <EndSection></EndSection>
             <Footer></Footer>
         </div>

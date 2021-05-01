@@ -6,11 +6,17 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { motion } from 'framer-motion';
+
 const Header = () => {
     return (
 
      
-        <nav className="navbar navbar-expand-lg navbar-light my-3 mx-3">
+        <motion.nav
+        initial={{y:-250}}
+        animate={{y:-10}}
+        transition={{delay:0.5}}
+        className="navbar navbar-expand-lg navbar-light my-3 mx-3">
 
         <Link to='/' style={{textDecoration:'none'}}><a className="navbar-brand main-logo" href="#">
         Immanual</a></Link>
@@ -39,7 +45,7 @@ const Header = () => {
         </li>
       </ul>
     </div>
-</nav>
+</motion.nav>
 
     );
 };

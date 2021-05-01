@@ -4,7 +4,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a192f;
+  /* background: linear-gradient(
+    353deg,
+    ,
+    ,
+    
+  ); */
+  background: linear-gradient(
+    315deg,
+    /* #3c4a96, */
+    #4d5ca8,
+    #0a192f
+   
+    
+  );
+  /* background-color: #0a192f; */
 }
 
 code {

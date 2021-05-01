@@ -6,14 +6,16 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 import AboutMe from './components/AboutMe/AboutMe';
 import NotFound from './components/NotFound/NotFound';
 import ContactMe from './components/ContactMe/ContactMe';
 import MyProjects from './components/MyProjects/MyProjects';
 import MyBlogs from './components/MyBlogs/MyBlogs';
 
+
 function App() {
-  return (
+   return (
     <div className="App">
     <Router>
     <Switch>

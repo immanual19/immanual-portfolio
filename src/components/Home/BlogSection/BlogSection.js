@@ -6,7 +6,7 @@ const BlogSection = () => {
     const randomThree=blogPosts.slice(0,3);
     return (
         <div className="my-5 mx-5">
-        <h1>Here is my Articles</h1><br/><br/>
+        <h1>my featured articles</h1><br/><br/>
         <div className="blog-section">
             {
                 randomThree.map(post=><ArticleCard post={post}></ArticleCard>)

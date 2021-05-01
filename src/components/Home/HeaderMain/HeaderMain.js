@@ -4,7 +4,11 @@ import './HeaderMain.css';
 const HeaderMain = () => {
     
     return (
-        <div className="my-5 mx-5">
+        <motion.div
+        initial={{x:'100vw'}}
+        animate={{x:0}}
+        transition={{type:'spring', delay:0.5}}
+        className="my-5 mx-5">
             <div className="row">
                 <div className="col-md-8 col-md-offset-2 text-white my-5 mx-5">
                     <p className="intro-text">Hi, I am</p>
@@ -16,14 +20,14 @@ const HeaderMain = () => {
                     <h3>I am a MERN stack developer who builds website.</h3>
                     <br/>
                     <p className="intro-text">I am a full stack web developer from Gobindaganj, Gaibandha who develops and designs website with the latest technology.</p><br/><br/>
-                <button className="downloadHireButton"> <a href="https://drive.google.com/uc?id=1aNyoCmmQTW0Hx3MSvCSpxYex7Ug0Hnot&export=download">Download Resume</a></button>
-                <button className="downloadHireButton">Hire Me</button>
+                <motion.button whileHover={{scale:1.1}} className="downloadHireButton"> <a href="https://drive.google.com/uc?id=1aNyoCmmQTW0Hx3MSvCSpxYex7Ug0Hnot&export=download">Download Resume</a></motion.button>
+                <motion.button whileHover={{scale:1.1}} className="downloadHireButton">Hire Me</motion.button>
                 </div>
                 <div className="col-md-2">
                 
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

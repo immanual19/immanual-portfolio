@@ -22,9 +22,7 @@
     color: white;
     text-decoration: none;
 }
-.downloadHireButton:hover{
-    background-color: #437851;
-}
+
 
 @media  screen and (max-width: 760px) {
     .myName{
