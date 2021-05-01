@@ -1,9 +1,11 @@
 import React from 'react';
 import './ContactMe.css';
 const ContactMe = () => {
+
+
     return (
         <div id="container">
-  <h1>&bull; Keep in Touch &bull;</h1>
+  <h1 className="contact-header">&bull; Keep in Touch &bull;</h1>
   <div class="underline">
   </div>
   <div class="icon_wrapper">

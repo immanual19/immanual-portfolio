@@ -8,9 +8,9 @@ const HeaderMain = () => {
         initial={{x:'100vw'}}
         animate={{x:0}}
         transition={{type:'spring', delay:0.5}}
-        className="my-5 mx-5">
+        className="my-5 my-introduction">
             <div className="row">
-                <div className="col-md-8 col-md-offset-2 text-white my-5 mx-5">
+                <div className="col-md-8">
                     <p className="intro-text">Hi, I am</p>
                     <motion.h1
                     animate={{ rotate: 360 }}
@@ -23,7 +23,7 @@ const HeaderMain = () => {
                 <motion.button whileHover={{scale:1.1}} className="downloadHireButton"> <a href="https://drive.google.com/uc?id=1aNyoCmmQTW0Hx3MSvCSpxYex7Ug0Hnot&export=download">Download Resume</a></motion.button>
                 <motion.button whileHover={{scale:1.1}} className="downloadHireButton">Hire Me</motion.button>
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-4">
                 
                 </div>
             </div>
