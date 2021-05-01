@@ -1,6 +1,6 @@
 import { Box, Button } from '@material-ui/core';
 import React from 'react';
-import blogPosts from '../../../FakeData/FakeData';
+import blogPosts from '../../../FakeData/BlogData';
 import ArticleCard from '../../MyBlogs/ArticleCard';
 const BlogSection = () => {
     const randomThree=blogPosts.slice(0,3);

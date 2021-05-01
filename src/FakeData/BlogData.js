@@ -1,6 +1,7 @@
 import guideLine from '../ArticleImage/guideLine.png';
 import react from '../ArticleImage/react.png';
 import JavaScriptImg from '../ArticleImage/js.jpeg';
+
 const blogPosts=[
     {
         headLine: 'What is JavaScript and Why should you learn it',
@@ -36,5 +37,7 @@ const shuffle=data=>{
 }
 
 shuffle(blogPosts);
+
+
 
 export default blogPosts;

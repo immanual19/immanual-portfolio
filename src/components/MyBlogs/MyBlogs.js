@@ -1,7 +1,7 @@
 import React from 'react';
 import ArticleCard from './ArticleCard';
 import './MyBlogs.css';
-import blogPosts from '../../FakeData/FakeData';
+import blogPosts from '../../FakeData/BlogData';
 
 const MyBlogs = () => {
     return (

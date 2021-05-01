@@ -12,7 +12,7 @@ const ContactMe = () => {
       <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
     </svg>
   </div>
-  <form action="#" method="post" id="contact_form">
+  <form id="contact_form">
     <div class="name">
       <label for="name"></label>
       <input type="text" placeholder="My name is" name="name" id="name_input" required/>
@@ -39,7 +39,7 @@ const ContactMe = () => {
       <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
     </div>
     <div class="submit">
-      <input type="submit" value="Send Message" id="form_button" />
+      <input type="submit" value="Send Message" id="form_button" disabled/>
     </div>
   </form>
 </div>

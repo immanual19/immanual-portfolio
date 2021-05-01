@@ -1,0 +1,13 @@
+.technology-used{
+    background-color: #0a192f;
+margin: 5px 5px 5px 5px;
+color: white;
+border: 1px solid lightgray;
+border-radius: 5px;
+}
+
+.footer-section a{
+    text-decoration: none;
+    color: white;
+    margin: 3%;
+}
