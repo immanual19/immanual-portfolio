@@ -6,7 +6,7 @@ const HeaderMain = () => {
     return (
         <div className="my-5 mx-5">
             <div className="row">
-                <div className="col-md-8 text-white my-5 mx-5">
+                <div className="col-md-8 col-md-offset-2 text-white my-5 mx-5">
                     <p className="intro-text">Hi, I am</p>
                     <motion.h1
                     animate={{ rotate: 360 }}
