@@ -1,4 +1,5 @@
 import React from 'react';
+import immanual from '../../MyImage/immanual.png';
 import './AboutMe.css';
 const AboutMe = () => {
     return (
@@ -16,7 +17,7 @@ const AboutMe = () => {
                 </div>
             </div>
             <div className="col-md-4 col-md-offset-2">
-                <img style={{borderRadius:'50%'}} src="https://i.ibb.co/nQKk3xR/imman-removebg-preview.png" alt="" className="img-fluid my-image"/>
+                <img style={{borderRadius:'50%'}} src={immanual} alt="" className="img-fluid my-image"/>
             </div>
             </div>
         </div>

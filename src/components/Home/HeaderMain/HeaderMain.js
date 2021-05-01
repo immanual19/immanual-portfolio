@@ -5,9 +5,9 @@ const HeaderMain = () => {
     
     return (
         <motion.div
-        initial={{x:'100vw'}}
-        animate={{x:0}}
-        transition={{type:'spring', delay:0.5}}
+        initial={{y:50}}
+        animate={{y:10}}
+        transition={{ delay:1}}
         className="my-5 my-introduction">
             <div className="row">
                 <div className="col-md-8">
