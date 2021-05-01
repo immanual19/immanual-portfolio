@@ -9,7 +9,7 @@ const ProjectCard = ({project}) => {
     const {projectName, live, client, server, image, description, technology}=project;
     return (
         
-        <motion.div whileHover={{ scale: 1.09 }} style={{margin:'5%'}} class="card-group w-75">
+        <motion.div whileHover={{ scale: 1.09 }} style={{margin:'5% auto'}} class="card-group w-75">
         
   <div style={{backgroundColor:'#0a192f', boxShadow:'5px 5px 5px #1d304f', borderRadius:'10px'}} class="card">
   <a  style={{textDecoration: 'none', color: 'white'}} href={live} target="_blank">

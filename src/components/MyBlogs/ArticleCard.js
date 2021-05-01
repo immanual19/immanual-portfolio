@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 const ArticleCard = ({post}) => {
     const classes = useStyles();
     return (
-      <motion.div whileHover={{ scale: 1.09 }} style={{margin:'5%'}}>
+      <motion.div whileHover={{ scale: 1.09 }} style={{margin:'5% auto'}}>
         <a  style={{textDecoration: 'none', color:'white'}} href={post.link} target="_blank"> <Card
         
         className={classes.root}>
