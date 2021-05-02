@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {db} from './firebase';
 import './ContactMe.css';
 const ContactMe = () => {
 
+  const [name,setName]=useState('');
+  const [email,setEmail]=useState('');
+  const [phone,setPhone]=useState('');
+  const [subject,setSubject]=useState('');
+  const [message,setMessage]=useState('');
+
+  const [loader, setLoader]=useState(false);
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    setLoader(true);
+
+    db.collection('ContactData').add({
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    })
+    .then(()=>{
+      alert('Message submitted');
+      setLoader(false);
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+    })
+    .catch((error)=>{
+      alert(error.message);
+      setLoader(false);
+    })
+    
+
+  }
 
     return (
         <div id="container">
@@ -14,14 +48,20 @@ const ContactMe = () => {
       <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
     </svg>
   </div>
-  <form id="contact_form">
+  <form id="contact_form" onSubmit={handleSubmit}>
     <div class="name">
       <label for="name"></label>
-      <input type="text" placeholder="My name is" name="name" id="name_input" required/>
+      <input
+      value={name}
+      onChange={(e)=>setName(e.target.value)}
+      type="text" placeholder="My name is" name="name" id="name_input" required/>
     </div>
     <div class="email">
       <label for="email"></label>
-      <input type="email" placeholder="My e-mail is" name="email" id="email_input" required/>
+      <input
+      value={email}
+      onChange={(e)=>setEmail(e.target.value)}
+      type="email" placeholder="My e-mail is" name="email" id="email_input" required/>
     </div>
     <div class="telephone">
       <label for="name"></label>
@@ -29,7 +69,10 @@ const ContactMe = () => {
     </div>
     <div class="subject">
       <label for="subject"></label>
-      <select placeholder="Subject line" name="subject" id="subject_input" required>
+      <select
+      value={subject}
+      onChange={(e)=>setSubject(e.target.value)}
+      placeholder="Subject line" name="subject" id="subject_input" required>
         <option disabled hidden selected>Subject line</option>
         <option>I'd like to start a project</option>
         <option>I'd like to ask a question</option>
@@ -38,10 +81,13 @@ const ContactMe = () => {
     </div>
     <div class="message">
       <label for="message"></label>
-      <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+      <textarea
+      value={message}
+      onChange={(e)=>setMessage(e.target.value)}
+      name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
     </div>
     <div class="submit">
-      <input type="submit" value="Send Message" id="form_button" disabled/>
+      <input type="submit" value="Send Message" id="form_button"/>
     </div>
   </form>
 </div>
