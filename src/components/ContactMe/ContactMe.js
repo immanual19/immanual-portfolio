@@ -1,44 +1,30 @@
 import React, { useState } from 'react';
-import {db} from './firebase';
+import emailjs from 'emailjs-com';
 import './ContactMe.css';
+import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 const ContactMe = () => {
 
-  const [name,setName]=useState('');
-  const [email,setEmail]=useState('');
-  const [phone,setPhone]=useState('');
-  const [subject,setSubject]=useState('');
-  const [message,setMessage]=useState('');
+  const [successful, setSuccessful]=useState(false);
 
-  const [loader, setLoader]=useState(false);
-
-  const handleSubmit=(e)=>{
+  function sendEmail(e) {
     e.preventDefault();
-    setLoader(true);
 
-    db.collection('ContactData').add({
-      name: name,
-      email: email,
-      subject: subject,
-      message: message
-    })
-    .then(()=>{
-      alert('Message submitted');
-      setLoader(false);
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
-    })
-    .catch((error)=>{
-      alert(error.message);
-      setLoader(false);
-    })
-    
-
+    emailjs.sendForm('service_sbjhcq7', 'template_g68n278', e.target, 'user_A01vmnNXx0ywwdmiTNtRu')
+      .then((result) => {
+          setSuccessful(true);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
   }
 
     return (
-        <div id="container">
+       
+      
+      
+
+  <div id="container">
   <h1 className="contact-header">&bull; Keep in Touch &bull;</h1>
   <div class="underline">
   </div>
@@ -48,49 +34,53 @@ const ContactMe = () => {
       <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
     </svg>
   </div>
-  <form id="contact_form" onSubmit={handleSubmit}>
+  <form id="contact_form" onSubmit={sendEmail}>
     <div class="name">
       <label for="name"></label>
       <input
-      value={name}
-      onChange={(e)=>setName(e.target.value)}
+      className="form-control"
       type="text" placeholder="My name is" name="name" id="name_input" required/>
     </div>
     <div class="email">
       <label for="email"></label>
       <input
-      value={email}
-      onChange={(e)=>setEmail(e.target.value)}
+      className="form-control"
       type="email" placeholder="My e-mail is" name="email" id="email_input" required/>
     </div>
     <div class="telephone">
       <label for="name"></label>
-      <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required/>
+      <input
+      className="form-control"
+      type="text" placeholder="My number is" name="telephone" id="telephone_input" required/>
     </div>
     <div class="subject">
       <label for="subject"></label>
       <select
-      value={subject}
-      onChange={(e)=>setSubject(e.target.value)}
+      className="form-control"
       placeholder="Subject line" name="subject" id="subject_input" required>
         <option disabled hidden selected>Subject line</option>
-        <option>I'd like to start a project</option>
-        <option>I'd like to ask a question</option>
-        <option>I'd like to make a proposal</option>
+        <option>I would like to start a project</option>
+        <option>I would like to ask a question</option>
+        <option>I would like to make a proposal</option>
       </select>
     </div>
     <div class="message">
       <label for="message"></label>
       <textarea
-      value={message}
-      onChange={(e)=>setMessage(e.target.value)}
+      className="form-control"
       name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
     </div>
+    {
+      successful && <p style={{color:'green'}}>Message sent successfully.</p>
+    }
     <div class="submit">
       <input type="submit" value="Send Message" id="form_button"/>
     </div>
+    
+    
   </form>
 </div>
+
     );
 };
 
